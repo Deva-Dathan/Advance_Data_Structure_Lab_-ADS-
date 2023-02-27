@@ -6,7 +6,6 @@ struct node
     struct node *next;  
 };  
 struct node *front,*rear;
-
 void enqueue()  
 {  
     struct node *ptr;  
@@ -70,8 +69,7 @@ void display()
         }  
         printf("\n");
     }  
-} 
-
+}
 void main()  
 {  
     int choice;   
@@ -90,7 +88,7 @@ void main()
             break;  
             case 4:exit(0);  
             break;  
-            default:printf("\nInvalid Choice.....Enter a Valid Choice\n");  
+            default:printf("\nInvalid Choice.....");  
         }  
     }  
 }  

@@ -72,7 +72,7 @@ void display()
     }  
 } 
 
-void main ()  
+void main()  
 {  
     int choice;   
     while(choice != 4)   

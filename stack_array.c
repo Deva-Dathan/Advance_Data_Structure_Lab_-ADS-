@@ -44,7 +44,7 @@ void display_item()
  }
 
 }
-int main()
+void main()
 {
     while(1)
     {
@@ -65,5 +65,5 @@ int main()
             
         }
 	}
-	return 0;
+	
 }

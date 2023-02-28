@@ -22,7 +22,7 @@ void enqueue()
         printf("\nEnter The Value:");  
         scanf("%d",&item);  
         ptr -> data = item;  
-        if(front == NULL)  
+        if(front == 0)  
         {  
             front = ptr;  
             rear = ptr;   

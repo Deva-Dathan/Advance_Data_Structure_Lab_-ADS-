@@ -29,7 +29,7 @@ void enqueue()
 {  
     int item;  
     printf("\nEnter the Values:");  
-    scanf("%d",&item);      
+    scanf("3%d",&item);      
     if(rear == maxsize-1)  
     {  
         printf("\nOVERFLOW\n");  

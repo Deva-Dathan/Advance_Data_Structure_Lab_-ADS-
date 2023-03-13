@@ -9,8 +9,12 @@ struct node {
 struct node *front = NULL;
 struct node *rear = NULL;
 
-void enqueue(int data) {
+void enqueue() 
+{
     struct node *newNode = (struct node*) malloc(sizeof(struct node));
+    int data;
+    printf("Enter The Value: ");
+    scanf("%d", &data);
     newNode->data = data;
     newNode->next = NULL;
     if(front == NULL && rear == NULL) {
@@ -22,7 +26,6 @@ void enqueue(int data) {
         rear = newNode;
         rear->next = front;
     }
-    printf("%d enqueued to queue.\n", data);
 }
 
 void dequeue() {
@@ -38,17 +41,17 @@ void dequeue() {
         front = front->next;
         rear->next = front;
     }
-    printf("%d dequeued from queue.\n", temp->data);
+    printf("%d is removed from queue.\n", temp->data);
     free(temp);
 }
 
 void display() {
     struct node *temp = front;
     if(front == NULL) {
-        printf("Queue is empty.\n");
+        printf("Queue is Empty.\n");
         return;
     }
-    printf("Elements in Circular Queue are: ");
+    printf("Printing The List : ");
     while(temp->next != front) {
         printf("%d ", temp->data);
         temp = temp->next;
@@ -59,14 +62,12 @@ void display() {
 int main() {
     int choice, data;
     while(1) {
-        printf("\n\n1. Enqueue\n2. Dequeue\n3. Display\n4. Exit\n");
-        printf("Enter your choice: ");
+        printf("\n1. Enqueue\t2. Dequeue\t3. Display\t4. Exit\n");
+        printf("\nEnter The Choice: ");
         scanf("%d", &choice);
         switch(choice) {
             case 1:
-                printf("Enter data to enqueue: ");
-                scanf("%d", &data);
-                enqueue(data);
+                enqueue();
                 break;
             case 2:
                 dequeue();
@@ -80,5 +81,4 @@ int main() {
                 printf("Invalid choice.\n");
         }
     }
-    return 0;
 }

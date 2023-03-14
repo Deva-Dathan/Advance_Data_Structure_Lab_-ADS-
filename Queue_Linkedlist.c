@@ -11,14 +11,7 @@ void enqueue()
     struct node *ptr;  
     int item;   
       
-    ptr = (struct node *) malloc (sizeof(struct node));  
-    if(ptr == NULL)  
-    {  
-        printf("\nOVERFLOW\n");  
-        return;  
-    }  
-    else  
-    {   
+    ptr = (struct node *) malloc (sizeof(struct node));    
         printf("\nEnter The Value:");  
         scanf("%d",&item);  
         ptr -> data = item;  
@@ -34,23 +27,14 @@ void enqueue()
             rear -> next = ptr;  
             rear = ptr;  
             rear->next = NULL;  
-        }  
-    }  
+        }   
 }     
 void dequeue()  
 {  
-    struct node *ptr;  
-    if(front == NULL)  
-    {  
-        printf("\nUNDERFLOW\n");  
-        return;  
-    }  
-    else   
-    {  
-        ptr = front;  
-        front = front->next;  
-        free(ptr);  
-    }  
+    struct node *ptr;   
+    ptr = front;  
+    front = front->next;  
+    free(ptr);   
 }  
 void display()  
 {  

@@ -43,10 +43,12 @@ void inorder(struct node *root)
 
 struct node* search(struct node* root, int key) 
 {
-    if (root == NULL || root->data == key) {
+    if (root == NULL || root->data == key) 
+    {
        return root;
     }
-    if (root->data < key) {
+    if (root->data < key) 
+    {
        return search(root->right, key);
     }
     return search(root->left, key);

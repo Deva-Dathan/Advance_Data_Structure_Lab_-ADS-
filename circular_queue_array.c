@@ -1,12 +1,11 @@
 #include <stdio.h>
 
-#define MAX_SIZE 5 // Maximum size of the circular queue
+#define MAX_SIZE 5
 
 int circularQueue[MAX_SIZE];
 int front = -1;
 int rear = -1;
 
-// Function to check if the circular queue is empty
 int isEmpty() {
     if (front == -1 && rear == -1)
         return 1;
@@ -14,7 +13,6 @@ int isEmpty() {
         return 0;
 }
 
-// Function to check if the circular queue is full
 int isFull() {
     if ((rear + 1) % MAX_SIZE == front)
         return 1;
@@ -22,7 +20,6 @@ int isFull() {
         return 0;
 }
 
-// Function to enqueue an element into the circular queue
 void enqueue(int item) {
     if (isFull()) {
         printf("Error: Circular Queue is full\n");
@@ -36,7 +33,6 @@ void enqueue(int item) {
     printf("%d has been enqueued\n", item);
 }
 
-// Function to dequeue an element from the circular queue
 void dequeue() {
     if (isEmpty()) {
         printf("Error: Circular Queue is empty\n");
@@ -50,7 +46,6 @@ void dequeue() {
     }
 }
 
-// Function to display the elements in the circular queue
 void display() {
     if (isEmpty()) {
         printf("Circular Queue is empty\n");

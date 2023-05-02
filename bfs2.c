@@ -67,17 +67,15 @@ int main() {
     for ( i = 0; i < numVertices; i++) {
         adj[i] = NULL;
     }
-    addEdge(adj, 0, 1);
-    addEdge(adj, 0, 2);
+    addEdge(adj, 1, 2);
     addEdge(adj, 1, 3);
-    addEdge(adj, 1, 4);
     addEdge(adj, 2, 4);
     addEdge(adj, 3, 4);
-    addEdge(adj, 3, 5);
+    addEdge(adj, 3, 7);
+    addEdge(adj, 4, 5);
     addEdge(adj, 4, 6);
-    addEdge(adj, 5, 6);
 
-    int startVertex = 0;
+    int startVertex = 1;
 BFS(adj, startVertex, numVertices);
 
 return 0;

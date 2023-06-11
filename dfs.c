@@ -55,11 +55,11 @@ int main() {
     add_edge(graph, 0, 1);
     add_edge(graph, 0, 2);
     add_edge(graph, 1, 3);
-    add_edge(graph, 1, 4);
+    add_edge(graph, 2, 3);
     add_edge(graph, 2, 4);
-    add_edge(graph, 4, 6);
-    add_edge(graph, 2, 5);
-    add_edge(graph, 5, 6);
+    add_edge(graph, 3, 4);
+    add_edge(graph, 3, 5);
+    add_edge(graph, 4, 5);
     printf("DFS Traversal: ");
     DFS_traversal(graph);
     return 0;
